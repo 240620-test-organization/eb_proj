@@ -13,6 +13,11 @@ public class MenuController {
 
     private final MenuService menuService;
 
+    @GetMapping("/")
+    public String healthCheckRoot() {
+        return "health check root!";
+    }
+
     @GetMapping("/health")
     public String healthCheck() {
         return "eb_proj is fine!";
