@@ -1,6 +1,7 @@
 package com.ohgiraffers.eb_proj.entity;
 
 import jakarta.persistence.*;
+import lombok.ToString;
 
 @Entity
 @Table(name="tbl_menu")

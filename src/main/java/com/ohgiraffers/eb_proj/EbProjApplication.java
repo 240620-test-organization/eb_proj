@@ -14,7 +14,14 @@ public class EbProjApplication {
 
     @Bean
     public ModelMapper modelMapper() {
-        return new ModelMapper();
+        ModelMapper modelMapper = new ModelMapper();
+        /* setter 메소드 미사용 시 ModelMapper가 private 필드에 접근 가능하도록 하는 설정 */
+        modelMapper.getConfiguration()
+                .setFieldAccessLevel(
+                        org.modelmapper.config.Configuration.AccessLevel.PRIVATE
+                )
+                .setFieldMatchingEnabled(true);
+        return modelMapper;
     }
 
 }
