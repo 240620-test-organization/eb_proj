@@ -3,20 +3,17 @@ package com.ohgiraffers.eb_proj.controller;
 import com.ohgiraffers.eb_proj.dto.MenuDTO;
 import com.ohgiraffers.eb_proj.service.MenuService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin("*")
 @RestController
 @RequiredArgsConstructor
 public class MenuController {
 
     private final MenuService menuService;
-
-/*    @GetMapping("/")
-    public String healthCheckRoot() {
-        return "health check root!";
-    }*/
 
     @GetMapping("/health")
     public String healthCheck() {
