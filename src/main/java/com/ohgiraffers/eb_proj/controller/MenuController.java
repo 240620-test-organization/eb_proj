@@ -13,10 +13,10 @@ public class MenuController {
 
     private final MenuService menuService;
 
-    @GetMapping("/")
+/*    @GetMapping("/")
     public String healthCheckRoot() {
         return "health check root!";
-    }
+    }*/
 
     @GetMapping("/health")
     public String healthCheck() {
